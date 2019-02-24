@@ -8,7 +8,7 @@ $('#submitButton').on('click', function(){
 	if (input){
 		cleanInput = cleanAndCheckInput(input);
 		if (cleanInput){
-			queryURL = 'http://api.giphy.com/v1/gifs/search?q=' + cleanInput + '&api_key=KbESqGhdlXfWMhMZRx7ekPvjdWb4ZgTG&limit=10';
+			queryURL = 'https://api.giphy.com/v1/gifs/search?q=' + cleanInput + '&api_key=KbESqGhdlXfWMhMZRx7ekPvjdWb4ZgTG&limit=10';
 			getGifs(cleanInput);
 			var newButton = $('<button type="load" class="animalButton btn btn-info"></button>');
 			newButton.text(cleanInput);
