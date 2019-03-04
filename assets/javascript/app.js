@@ -3,6 +3,7 @@ var gifsArray = [];
 
 // create new button for input
 $('#submitButton').on('click', function(){
+	$('#alert').hide();
 	event.preventDefault();
 	input = $('#input').val();
 	if (input){
@@ -30,8 +31,8 @@ $(document).on('click', '.animalButton', function(){
 // creates images and appends them to #images div
 function showImages(name){
 	for (var i in gifsArray[name]){
-		var container = $('<div class="col-m-12 col-6 float-left" id=' + i + '></div>');
-		var header = $('<h2 class="col-12"></h2>');
+		var container = $('<div class="col-s-6 float-left" id=' + i + '></div>');
+		var header = $('<h3 class="col-12"></h3>');
 		var img = $('<img data="anim"></img>');
 		img.attr('src', gifsArray[name][i].anim);
 		img.attr('index', i);
@@ -80,7 +81,7 @@ function cleanAndCheckInput(str){
 	keys = Object.keys(gifsArray);
 	for (var i in keys){
 		if (animalName === keys[i].toLowerCase()){
-			alert('Please enter a new animal name');
+			$('#alert').show();
 			return false;
 		}
 	}
