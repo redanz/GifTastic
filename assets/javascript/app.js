@@ -1,5 +1,6 @@
-var queryURL;
+var queryURL = 'https://api.giphy.com/v1/gifs/search?q=cat&api_key=KbESqGhdlXfWMhMZRx7ekPvjdWb4ZgTG&limit=10';
 var gifsArray = [];
+getGifs('Cat');
 
 // create new button for input
 $('#submitButton').on('click', function(){
@@ -11,7 +12,7 @@ $('#submitButton').on('click', function(){
 		if (cleanInput){
 			queryURL = 'https://api.giphy.com/v1/gifs/search?q=' + cleanInput + '&api_key=KbESqGhdlXfWMhMZRx7ekPvjdWb4ZgTG&limit=10';
 			getGifs(cleanInput);
-			var newButton = $('<button type="load" class="animalButton btn btn-info"></button>');
+			var newButton = $('<button type="load" class="animalButton btn btn-info m-1"></button>');
 			newButton.text(cleanInput);
 			$('.buttonsDiv').append(newButton);
 			$('#input').val('');
@@ -37,7 +38,6 @@ function showImages(name){
 		img.attr('src', gifsArray[name][i].anim);
 		img.attr('index', i);
 		header.text('Rating: ' + gifsArray[name][i].rating);
-		// header.append(img);
 		container.append(header, img);
 		$('#images').append(container);
 	}
@@ -56,7 +56,7 @@ $(document).on('click', 'img', function(){
 	}
 });
 
-// Makes Ajax call to get data and pushes to gifArray
+// makes Ajax call to get data and pushes to gifArray
 function getGifs(animal){
 	$.ajax({
 		url: queryURL,
@@ -75,7 +75,7 @@ function getGifs(animal){
 }
 
 
-// Looks for duplicates and cleans format
+// looks for duplicates and cleans format
 function cleanAndCheckInput(str){
 	animalName = str.toLowerCase();
 	keys = Object.keys(gifsArray);

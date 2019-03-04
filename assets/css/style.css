@@ -3,17 +3,7 @@ body {
 }
 
 img {
-	width: 300px;
-	height: auto;
-	padding: 5px;
-}
-
-.buttonsDiv {
-	padding: 5px;
-	margin: 10px;
-	height: 60px;
-}
-
-.animalButton {
-	margin: 5px;
+	height: 200px;
+	width: auto;
+	padding: 10px;
 }

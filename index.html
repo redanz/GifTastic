@@ -15,31 +15,35 @@
 </head>
 <body>
 
-	<div class="buttonsDiv">
-		
-	</div>
+	<div class="container w-100 ml-4">
 
-	<div class="container">
-
-		<div id="images" class="col-8 float-left"></div>
-
-		<div id="form-container" class="col-4 float-left">
-			<form>
-				<div class="form-group">
-					<label for="query" class="font-weight-bold">Add an animal</label>
-					<input type="text" class="form-control" id="input" aria-describedby="searchTerm" placeholder="Enter animal name">
-				</div>
-				<div class="float-none">
-					<button id="submitButton" type="submit" class="btn btn-info button-3">Submit</button>
-				</div>
-				<br>
-				<p id="alert" style="display: none">Please enter a new animal name</p>
-
-			</form>
+		<div class="row mt-4">
+			<div class="buttonsDiv ml-4">
+				<button type="load" class="animalButton btn btn-info m-1">Cat</button>
+			</div>
 		</div>
+
+		<div class="row mt-4">
+			<div id="images" class="col-8"></div>
+			<div id="form-container" class="col-4">
+				<form>
+					<div class="form-group">
+						<label for="query" class="font-weight-bold">Add an animal</label>
+						<input type="text" class="form-control" id="input" aria-describedby="searchTerm" placeholder="Enter animal name">
+					</div>
+					<div>
+						<button id="submitButton" type="submit" class="btn btn-info button-3">Submit</button>
+					</div>
+					<br>
+					<p id="alert" style="display: none">Please enter a new animal name</p>
+				</form>
+			</div>
+		</div>
+
 	</div>
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="./assets/javascript/app.js"></script>
+
 </body>
 </html>
